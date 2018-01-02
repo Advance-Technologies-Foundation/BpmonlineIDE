@@ -5,11 +5,11 @@ using Terrasoft.Core.Entities;
 
 namespace DevBpm
 {
-	internal class Sandbox : IExecutor
+	internal class Executor : IExecutor
 	{
 		public void Execute(UserConnection userConnection) {
 			HttpContext.Current.Response.Write(Environment.NewLine);
-			var entitySchema = userConnection.EntitySchemaManager.GetInstanceByName("Account");
+			var entitySchema = userConnection.EntitySchemaManager.GetInstanceByName("Contact");
 			var esq = new EntitySchemaQuery(entitySchema);
 			esq.AddAllSchemaColumns();
 			var collection = esq.GetEntityCollection(userConnection);

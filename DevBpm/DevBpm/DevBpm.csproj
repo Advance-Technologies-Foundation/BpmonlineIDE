@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sandbox.cs" />
+    <Compile Include="Executor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Executor\Executor.exe" />
@@ -61,6 +61,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>c:\Projects\devpngstore\BpmonlineIDE\DevBpm\DevBpm\Executor\Executor.exe</PostBuildEvent>
+    <PostBuildEvent>$(ProjectDir)\Executor\Executor.exe --url="https://crm-bundle.bpmonline.com"  --filePath="$(TargetPath)" --login=Supervisor --password=Supervisor --executorType="$(TargetName).Executor"</PostBuildEvent>
   </PropertyGroup>
 </Project>
