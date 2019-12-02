@@ -61,6 +61,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>$(ProjectDir)\Executor\Executor.exe --url="https://crm-bundle.bpmonline.com"  --filePath="$(TargetPath)" --login=Supervisor --password=Supervisor --executorType="$(TargetName).Executor"</PostBuildEvent>
+    <PostBuildEvent>$(ProjectDir)\Executor\Executor.exe --url="https://crm-bundle.bpmonline.com"  --filePath="$(TargetPath)" --login=UserLogin --password=UserPassword --executorType="$(TargetName).Executor"</PostBuildEvent>
   </PropertyGroup>
 </Project>
